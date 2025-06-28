@@ -1,0 +1,26 @@
+.home-background {
+    min-height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/ca/4d/23/ca4d2391455ade48053c0b6861842574.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .home-btn {
+    background: linear-gradient(90deg, pink 0%, purple 100%);
+    color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 1rem 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 20px rgba(30,60,114,0.2);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  }
