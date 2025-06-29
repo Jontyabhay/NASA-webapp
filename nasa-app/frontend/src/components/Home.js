@@ -10,7 +10,7 @@ const Home = () => {
       <button className="home-btn" onClick={() => navigate('/apod')} style={{ marginRight: '30rem', marginTop: '-19rem', padding: '1rem 2rem', marginBottom: '5rem'}}>
         Astronomy Picture of the Day
       </button>
-      <button onClick={() => navigate('/mars-photos')} style={{ margin: '1rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
+      <button className="home-btn" onClick={() => navigate('/mars-photos')} style={{ margin: '1rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
         Mars Rover Photos
       </button>
     </div>
