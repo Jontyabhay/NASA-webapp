@@ -1,9 +1,11 @@
 // frontend/src/components/APOD.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const APOD = () => {
   const [data, setData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAPOD = async () => {
@@ -20,6 +22,21 @@ const APOD = () => {
 
   return (
     <div>
+       <button
+        onClick={() => navigate('/')}
+        style={{
+          margin: '1rem 0',
+          padding: '0.5rem 1.5rem',
+          borderRadius: '20px',
+          border: 'none',
+          background: 'linear-gradient(90deg, purple 0%, pink 100%)',
+          color: '#fff',
+          fontWeight: 'bold',
+          cursor: 'pointer'
+        }}
+      >
+        ← Back to Homepage
+      </button> 
       {data ? (
         <div>
           <h1>{data.title}</h1>
