@@ -10,6 +10,25 @@
     justify-content: flex-start;
   }
 
+  .heading-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .nasa-title {
+    color: #fff;
+    font-size: 3rem;
+    margin-right: 1rem;
+  }
+  
+  .nasa-logo {
+    width: 48px;      /* Adjust size as needed */
+    height: 48px;
+    object-fit: contain;
+  }
+
   .home-btn {
     background: linear-gradient(90deg, pink 0%, purple 100%);
     color: black;
@@ -30,4 +49,29 @@
     color: white;
     transform: translateY(-4px) scale(1.05);
     box-shadow: 0 8px 32px rgba(30,60,114,0.3);
+  }
+
+  .intro {
+    color: #fff;
+    background: blue(0,0,0,0.5);
+    padding: auto auto;
+    border-radius: 12px;
+    margin: -11rem 15rem auto auto; /* Adjust top and bottom margin as needed */
+    font-size: 1.7rem;
+    font-weight: 900;
+    font-style: italic;
+    max-width: 40vw;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    align-self: center;
+  }
+
+  .footer {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    padding: 1rem 0;
+    margin-top: 2rem;
   }
