@@ -24,22 +24,17 @@ const APOD = () => {
     <div>
        <button
         onClick={() => navigate('/')}
-        style={{
-          margin: '1rem 0',
-          padding: '0.5rem 1.5rem',
-          borderRadius: '20px',
-          border: 'none',
+        style={{ margin: '1rem 0', padding: '0.5rem 1.5rem',
+          borderRadius: '20px', border: 'none',
           background: 'linear-gradient(90deg, purple 0%, pink 100%)',
-          color: '#fff',
-          fontWeight: 'bold',
+          color: '#fff', fontWeight: 'bold',
           cursor: 'pointer'
         }}
-      >
-        ← Back to Homepage
-      </button> 
+      >← Back to Homepage</button> 
       {data ? (
         <div>
           <h1>{data.title}</h1>
+            <p><strong>Date:</strong> {data.date}</p>
           <p>{data.explanation}</p>
           <img src={data.url} alt={data.title} style={{ maxWidth: '100%' }} />
         </div>

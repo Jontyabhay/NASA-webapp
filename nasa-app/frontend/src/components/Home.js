@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="home-background">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
-        <h1 style={{ color: '#fff', fontSize: '5rem', marginBottom: '30rem', marginRight: '2rem'}}>NASA Space Explorer</h1>
+        <h1 style={{ color: '#fff', fontSize: '5rem', marginBottom: '30rem', marginRight: '2rem'}}>NASA Data Explorer</h1>
         <img src={logo} alt="NASA Logo" style={{ marginTop: '-25rem', width: '80px', height: '80px', objectFit: 'contain'}}/>
       </div>
       <button className="home-btn" onClick={() => navigate('/apod')} style={{ marginRight: '70rem', marginTop: '-23rem', padding: '1rem 2rem', marginBottom: '5rem'}}>
