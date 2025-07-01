@@ -16,10 +16,15 @@ const NASA_API_KEY = process.env.NASA_API_KEY;
 // Route to fetch Astronomy Picture of the Day (APOD)
 app.get('/apod', async (req, res) => {
   try {
-    const response = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}`);
-    res.json(response.data); // Send the response to the frontend
+    const { start_date, end_date } = req.query;
+    if (!start_date || !end_date) {
+      return res.status(400).json({ error: 'start_date and end_date are required' });
+    }
+    const url = `https://api.nasa.gov/planetary/apod?api_key=${NASA_API_KEY}&start_date=${start_date}&end_date=${end_date}`;
+    const response = await axios.get(url);
+    res.json(response.data);
   } catch (error) {
-    console.error('Error fetching data from NASA API:', error.response.data); // Log the error response
+    console.error('Error fetching data from NASA API:', error.response?.data || error.message);
     res.status(500).json({ error: 'Failed to fetch data from NASA API' });
   }
 });
