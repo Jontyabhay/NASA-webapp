@@ -29,6 +29,22 @@ app.get('/apod', async (req, res) => {
   }
 });
 
+// Route to fetch Mars Rover Photos
+app.get('/mars-photos', async (req, res) => {
+  try {
+    const { sol } = req.query;
+    if (!sol) {
+      return res.status(400).json({ error: 'sol is required' });
+    }
+    const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=${sol}&api_key=${NASA_API_KEY}`;
+    const response = await axios.get(url);
+    res.json(response.data.photos);
+  } catch (error) {
+    console.error('Error fetching Mars photos:', error.response?.data || error.message);
+    res.status(500).json({ error: 'Failed to fetch Mars photos' });
+  }
+});  
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

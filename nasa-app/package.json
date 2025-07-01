@@ -2,12 +2,24 @@
   "name": "nasa-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "concurrently \"npm start --prefix backend\" \"npm start --prefix frontend\""
+    "start": "concurrently \"npm start --prefix backend\" \"npm start --prefix frontend\"",
+    "preinstall": "npx npm-force-resolutions"
   },
   "devDependencies": {
-    "concurrently": "^9.2.0"
+    "concurrently": "^9.2.0",
+    "npm-force-resolutions": "^0.0.10"
   },
   "dependencies": {
-    "react-router-dom": "^7.6.2"
+    "axios": "^1.10.0",
+    "chart.js": "^4.5.0",
+    "react": "19.1.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "19.1.0",
+    "react-router-dom": "^7.6.2",
+    "react-vertical-timeline-component": "^3.5.3"
+  },
+  "resolutions": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   }
 }
