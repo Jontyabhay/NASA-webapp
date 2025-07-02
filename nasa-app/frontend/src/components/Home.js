@@ -15,16 +15,10 @@ const Home = () => {
         Astronomy Picture of the Day
       </button>
       <button className="home-btn" onClick={() => navigate('/mars-photos/camera-usage')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
-        Mars Rover Photos
+        Mars Rover Photos Visualization
       </button>
-      <button className="home-btn" onClick={() => navigate('/mars-photos')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
-        Earth Polychromatic Imaging Camera
-      </button>
-      <button className="home-btn" onClick={() => navigate('/mars-photos')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
-        Near earth Object Web Service
-      </button>
-      <button className="home-btn" onClick={() => navigate('/mars-photos')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '3rem' }}>
-        NASA Image and Video Library
+      <button className="home-btn" onClick={() => navigate('/api/neo-feed')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
+        EPIC Visualization
       </button>
       <div className="intro">
         <p>"Delve into the wonders of the Universe with Astronomy Picture of the day, Mars Rover Photos and more. Click any button to start your cosmic journey."</p>

@@ -54,6 +54,21 @@ app.get('/mars-photos/camera-usage', async (req, res) => {
   }
 });
 
+// Route to fetch EPIC image counts per day
+app.get('/api/neo-feed', async (req, res) => {
+  const { start_date, end_date } = req.query;
+  if (!start_date || !end_date) {
+    return res.status(400).json({ error: 'start_date and end_date are required' });
+  }
+  try {
+    const nasaUrl = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${start_date}&end_date=${end_date}&api_key=${NASA_API_KEY}`;
+    const response = await axios.get(nasaUrl);
+    res.json(response.data);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch data from NASA API' });
+  }
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
