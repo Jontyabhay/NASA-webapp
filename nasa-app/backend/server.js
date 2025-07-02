@@ -30,7 +30,7 @@ app.get('/apod', async (req, res) => {
 });
 
 // Route to fetch Mars Rover Photos
-app.get('/mars-photos', async (req, res) => {
+app.get('/mars-photos/camera-usage', async (req, res) => {
   try {
     const { sol } = req.query;
     if (!sol) {
@@ -38,14 +38,24 @@ app.get('/mars-photos', async (req, res) => {
     }
     const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=${sol}&api_key=${NASA_API_KEY}`;
     const response = await axios.get(url);
-    res.json(response.data.photos);
+    const photos = response.data.photos;
+
+    // Count photos per camera
+    const cameraUsage = {};
+    photos.forEach(photo => {
+      const cam = photo.camera.name;
+      cameraUsage[cam] = (cameraUsage[cam] || 0) + 1;
+    });
+
+    res.json(cameraUsage);
   } catch (error) {
-    console.error('Error fetching Mars photos:', error.response?.data || error.message);
-    res.status(500).json({ error: 'Failed to fetch Mars photos' });
+    console.error('Error fetching camera usage:', error.response?.data || error.message);
+    res.status(500).json({ error: 'Failed to fetch camera usage' });
   }
-});  
+});
 
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
-});
+}); 
+

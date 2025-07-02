@@ -14,7 +14,7 @@ const Home = () => {
       <button className="home-btn" onClick={() => navigate('/apod')} style={{ marginRight: '70rem', marginTop: '-23rem', padding: '1rem 2rem', marginBottom: '5rem'}}>
         Astronomy Picture of the Day
       </button>
-      <button className="home-btn" onClick={() => navigate('/mars-photos')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
+      <button className="home-btn" onClick={() => navigate('/mars-photos/camera-usage')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
         Mars Rover Photos
       </button>
       <button className="home-btn" onClick={() => navigate('/mars-photos')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
