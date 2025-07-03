@@ -1,0 +1,70 @@
+.mars-background {
+    min-height: 100vh;
+    background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwPjDRVixzEW7g0K2s4yKppG2uExnN3on7xIKXI56gbaG9GUO93i6wui_ZB9mT-mVwZEsrfJHdVnpWcB9gGqSQc4ZeJFZoUL_jh2xJxULNSncqAZ5M3TDj0pyOZ8Xw70SewP2WbITLe-jt/s1600/Mars+Colony+by+Luis+Peres+-+book+cover+art+2+for+Generation+Mars+-+Scratching+the+Surface.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+.mars-title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 5rem;
+    letter-spacing: 1px;
+  }
+
+  .mars-description {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    max-width: 800px;
+    line-height: 1;
+  }
+  
+.mars-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+.mars-form label {
+    color: #fff;
+    font-size: 2rem;
+    font-style: italic;
+  }
+  
+  .mars-input {
+    width: 100px;
+    margin-left: 8px;
+    padding: 10px 8px;
+    margin-top: -20px;
+    border-radius: 4px;
+    border: 3px solid #ccc;
+    background-color: #000;
+    color: #fff;
+  }
+  
+.mars-button {
+    background: linear-gradient(90deg, white);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 0.7rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 2rem;
+    box-shadow: 0 4px 12px rgba(30,60,114,0.15);
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+.mars-button:hover {
+    background: #1976d2;
+  }

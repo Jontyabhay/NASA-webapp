@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Home.css';
+import './css/Home.css';
 import logo from './images/NASA.jpg';
 
 const Home = () => {
@@ -14,14 +14,14 @@ const Home = () => {
       <button className="home-btn" onClick={() => navigate('/apod')} style={{ marginRight: '70rem', marginTop: '-23rem', padding: '1rem 2rem', marginBottom: '5rem'}}>
         Astronomy Picture of the Day
       </button>
-      <button className="home-btn" onClick={() => navigate('/mars-photos/camera-usage')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
+      <button className="home-btn" onClick={() => navigate('/mars-photos')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
         Mars Rover Photos Visualization
       </button>
       <button className="home-btn" onClick={() => navigate('/api/neo-feed')} style={{ marginRight: '70rem', padding: '1rem 2rem', marginBottom: '5rem' }}>
-        EPIC Visualization
+        Near Earth Object Visualization
       </button>
       <div className="intro">
-        <p>"Delve into the wonders of the Universe with Astronomy Picture of the day, Mars Rover Photos and more. Click any button to start your cosmic journey."</p>
+        <p>"Delve into the wonders of the Universe with Astronomy Picture of the day, Mars Rover Cameras and more. Click any button to start your cosmic journey."</p>
       </div>
       <footer className="footer">
         &copy; {new Date().getFullYear()} Bounce Insights | Made with ❤️ by Akshay Mishra

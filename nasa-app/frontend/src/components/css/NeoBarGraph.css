@@ -1,0 +1,75 @@
+.neo-background {
+    min-height: 100vh;
+    background-image: url('https://scitechdaily.com/images/Near-Earth-Objects-scaled.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+.neo-description {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1rem;
+    max-width: 800px;
+    line-height: 1;
+  }
+
+.date-input {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #888;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    outline: none;
+    transition: border 0.2s;
+  }
+
+.date-input:focus {
+    border: 1.5px solid #6cf;
+  }
+
+.fetch-btn {
+    background: linear-gradient(90deg, white);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 0.7rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 2rem;
+    box-shadow: 0 4px 12px rgba(30,60,114,0.15);
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+.fetch-btn:hover {
+    background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+    transform: translateY(-2px) scale(1.04);
+  }
+
+.back-btn {
+    background: linear-gradient(90deg, white);
+    color: black;
+    border: none;
+    border-radius: 25px;
+    padding: 0.7rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 2rem;
+    box-shadow: 0 4px 12px rgba(30,60,114,0.15);
+    transition: background 0.3s, transform 0.2s;
+  }
+
+.back-btn:hover {
+    background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
+    transform: translateY(-2px) scale(1.04);
+  }

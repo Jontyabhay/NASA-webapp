@@ -1,7 +1,7 @@
 // src/components/APODGallery.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import './APOD.css';
+import './css/APOD.css';
 import { useNavigate } from 'react-router-dom';
 
 const APOD = () => {
@@ -26,6 +26,7 @@ const APOD = () => {
     setLoading(false);
   };
 
+  // Render the component
   return (
     <div className='apod-background'>
       <h2 style={{ color: '#fff'}}>APOD Gallery</h2>

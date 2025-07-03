@@ -10,6 +10,8 @@ import {
     Tooltip,
     Legend,
   } from 'chart.js';
+  import './css/NeoBarGraph.css';
+  import { useNavigate } from 'react-router-dom';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -19,6 +21,7 @@ function NeoBarGraph() {
   const [chartData, setChartData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const fetchData = async (e) => {
     e.preventDefault();
@@ -50,20 +53,23 @@ function NeoBarGraph() {
       }
     setLoading(false);
   };
-
+  // Render the component
   return (
-    <div>
-      <h2>NEO Bar Graph</h2>
+    <div className='neo-background'>
+      <h1 style={{ color: '#fff'}}>Near Eath Objects Bar Graph</h1>
+      <h2 className='neo-description'>Visualize a list of Asteroids based on their closest approach date to Earth (end date should be not more than 7 days from start date)</h2>
       <form onSubmit={fetchData}>
-        <label>
+        <label style={{ color: '#fff', fontWeight: 'bold'}}>
           Start Date:
-          <input type="date" value={startDate} onChange={e => setStartDate(e.target.value)} required />
+          <input className="date-input" style={{ marginLeft: '1rem' }} type="date" value={startDate} onChange={e => setStartDate(e.target.value)} required />
         </label>
-        <label>
+        <label style={{ color: '#fff', fontWeight: 'bold'}}>
           End Date:
-          <input type="date" value={endDate} onChange={e => setEndDate(e.target.value)} required />
+          <input className="date-input" style={{ marginLeft: '1rem' }} type="date" value={endDate} onChange={e => setEndDate(e.target.value)} required />
         </label>
-        <button type="submit">Fetch Data</button>
+        <button className="fetch-btn" type="submit">Fetch Data</button>
+        <button onClick={() => navigate('/')} className="back-btn" style={{ marginLeft: '1rem' }}>
+          Back to Homepage </button>
       </form>
       {loading && <div>Loading...</div>}
       {error && <div style={{color: 'red'}}>{error}</div>}

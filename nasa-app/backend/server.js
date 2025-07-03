@@ -30,7 +30,7 @@ app.get('/apod', async (req, res) => {
 });
 
 // Route to fetch Mars Rover Photos
-app.get('/mars-photos/camera-usage', async (req, res) => {
+app.get('/mars-photos', async (req, res) => {
   try {
     const { sol } = req.query;
     if (!sol) {
