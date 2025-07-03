@@ -25,7 +25,7 @@ test('renders APOD Gallery title', () => {
 
 test('shows loading and fetches APODs successfully', async () => {
   axios.get.mockResolvedValueOnce({
-    data: [{ title: 'Test APOD', url: 'http://example.com/image.jpg', date: '2022-01-01' }]
+    data: [{ title: 'Test APOD', date: '2022-01-01' }]
   });
 
   render(<APOD />);

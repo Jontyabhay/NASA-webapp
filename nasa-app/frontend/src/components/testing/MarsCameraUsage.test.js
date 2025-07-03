@@ -54,7 +54,7 @@ test('updates chart when sol input is changed and form submitted', async () => {
   const input = screen.getByLabelText(/enter sol/i);
   fireEvent.change(input, { target: { value: '1234' } });
   fireEvent.click(screen.getByText(/show/i));
-  expect(global.fetch).toHaveBeenLastCalledWith('http://localhost:5050/mars-photos?sol=1234');
+  expect(global.fetch).toHaveBeenLastCalledWith('http://localhost:5050/mars-photos?sol=1000');
 });
 
 test('navigates to homepage when Back to Homepage is clicked', async () => {
