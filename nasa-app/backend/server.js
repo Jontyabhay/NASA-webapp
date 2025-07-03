@@ -68,6 +68,8 @@ app.get('/api/neo-feed', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch data from NASA API' });
   }
 });
+//export the app
+module.exports = app;
 
 // Start the server
 app.listen(PORT, () => {
