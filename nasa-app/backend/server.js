@@ -6,12 +6,18 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5050;
+const path = require('path');
 
 app.use(cors());
 app.use(express.json());
 
 // NASA API Key
 const NASA_API_KEY = process.env.NASA_API_KEY;
+
+//Route to fetch Home page
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/src/components/Home.js'));
+});
 
 // Route to fetch Astronomy Picture of the Day (APOD)
 app.get('/apod', async (req, res) => {
