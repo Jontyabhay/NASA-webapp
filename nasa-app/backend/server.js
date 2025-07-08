@@ -10,15 +10,9 @@ const path = require('path');
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../frontend/public')));
 
 // NASA API Key
 const NASA_API_KEY = process.env.NASA_API_KEY;
-
-//Root Route
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/public', 'index.html'));
-});
 
 // Route to fetch Astronomy Picture of the Day (APOD)
 app.get('/apod', async (req, res) => {
