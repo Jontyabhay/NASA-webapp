@@ -29,7 +29,7 @@ function NeoBarGraph() {
     setError('');
     setChartData(null);
     try {
-      const res = await axios.get('http://localhost:5050/api/neo-feed', {
+      const res = await axios.get('https://nasa-webapp.onrender.com/api/neo-feed', {
         params: { start_date: startDate, end_date: endDate }
       });
       const neoData = res.data.near_earth_objects;

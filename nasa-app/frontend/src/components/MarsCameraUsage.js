@@ -15,7 +15,7 @@ function CameraUsagePieChart({ sol }) {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch(`http://localhost:5050/mars-photos?sol=${sol}`)
+    fetch(`https://nasa-webapp.onrender.com/mars-photos?sol=${sol}`)
       .then(res => res.json())
       .then(setData);
   }, [sol]);

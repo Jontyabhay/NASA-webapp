@@ -16,7 +16,7 @@ const APOD = () => {
     setLoading(true);
     setError('');
     try {
-      const res = await axios.get('http://localhost:5050/apod', {
+      const res = await axios.get('https://nasa-webapp.onrender.com/apod', {
         params: { start_date: startDate, end_date: endDate }
       });
       setApods(Array.isArray(res.data) ? res.data : [res.data]);
