@@ -4,7 +4,7 @@ import './css/Home.css';
 import logo from './images/NASA.jpg';
 
 const Home = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
   return (
     <div className="home-background">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1rem' }}>
